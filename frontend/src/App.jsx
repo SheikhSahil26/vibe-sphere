@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {BrowserRouter,Routes,Route,Router,Navigate} from 'react-router-dom';
 import Login from './pages/Login.jsx'
 import HomePage from './pages/HomePage.jsx'
-import Signup from './pages/signup.jsx';
+import Signup from './pages/SignUp.jsx'
 import toast, { Toaster } from 'react-hot-toast'; 
 import { useAuthContext } from './context/authContext.jsx'
 import EditProfile from './pages/editProfile.jsx';
