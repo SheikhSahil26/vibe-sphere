@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { Bell, MessageCircle, Search, Home, Bookmark, Users, Settings, TrendingUp } from 'lucide-react';
 import { useAuthContext } from '../context/authContext';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const RightSideBar = () => {
 
