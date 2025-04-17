@@ -15,7 +15,7 @@ console.log("cron job activated!!!!")
 const connectToMongoDB=require("./db/connectToMongoDB");
 
 const app=express();
-const PORT=2000;
+const PORT=process.env.PORT||2000;
 
 const cors=require("cors");
 

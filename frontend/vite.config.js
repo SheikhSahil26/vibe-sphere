@@ -9,7 +9,7 @@ export default defineConfig({
     port:4000,
     proxy:{
       "/api":{
-        target:"http://localhost:2000",
+        target:"https://vibe-sphere.onrender.com",//backend url
         ws: true,
         
       }
