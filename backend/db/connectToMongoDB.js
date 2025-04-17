@@ -6,7 +6,10 @@ const connectToMongoDB=async (req,res)=>{
     try{
        const isProduction=process.env.NODE_ENV==="production";
        const mongoURI=isProduction?process.env.MONGODB_PRODUCTION_URI:process.env.MONGODB_DEVELOPMENT_URI;
-       await mongoose.connect(mongoURI);
+       await mongoose.connect(mongoURI,{
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+       });
        if(mongoURI===process.env.MONGODB_DEVELOPMENT_URI)console.log("connected to local")
        
         console.log("mongoDB connected successfully");
