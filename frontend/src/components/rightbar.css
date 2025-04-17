@@ -1,0 +1,104 @@
+.right-sidebar {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    height: calc(100vh - 48px);
+    position: sticky;
+    top: 24px;
+    overflow-y: auto;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .trending-item {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .trending-item:hover {
+    background: #f0f2f5;
+  }
+  
+  .trending-tag {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .trending-count {
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .suggestions-section {
+    margin-top: 32px;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .suggestion-info {
+    flex: 1;
+  }
+  
+  .suggestion-info h4 {
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .suggestion-info span {
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .follow-btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .follow-btn:hover {
+    background: #1557b0;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 1200px) {
+    .social-container {
+      grid-template-columns: 80px 1fr;
+    }
+  
+    .right-sidebar {
+      display: none;
+    }
+  }
