@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage.jsx'
 import Signup from './pages/SignUp.jsx'
 import toast, { Toaster } from 'react-hot-toast'; 
 import { useAuthContext } from './context/authContext.jsx'
-import EditProfile from './pages/EditProfile.jsx';
+import EditProfile from './pages/EditProfile';
 import Profile from './pages/Profile.jsx';
 import AddPost from './pages/AddPost.jsx';
 import SeeComments from './pages/SeeComments.jsx';
