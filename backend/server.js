@@ -20,8 +20,8 @@ const PORT=2000;
 const cors=require("cors");
 
 app.use(cors({
-    origin:["http://localhost:4000","deployedfrontendURL"],//this is frontend URL for cors 
-    methods:['GET','POST'],
+    origin:["http://localhost:4000","https://vibe-sphere-sooty.vercel.app"],//this is frontend URL for cors 
+    methods:['GET','POST','DELETE','PUT'],
     credentials:true,
 }))
 
