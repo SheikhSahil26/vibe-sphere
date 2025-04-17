@@ -8,7 +8,7 @@ const path=require('path');
 
 //cron job for story deletion
 
-require("./cron/storyCron");
+
 console.log("cron job activated!!!!")
 
 
@@ -24,6 +24,8 @@ app.use(cors({
     methods:['GET','POST','DELETE','PUT'],
     credentials:true,
 }))
+
+require("./cron/storyCron");
 
 app.use(express.static(path.join(__dirname,'public')));
 
