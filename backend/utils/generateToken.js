@@ -6,7 +6,7 @@ const generateTokenAndSetCookie=(userId,res)=>{
     res.cookie("jwt",token,{
         maxAge:24*60*60*1000,  //max time of cookie in ms
         httpOnly:true,        //prevent XSS attacks cross-site scripting
-        sameSite:"None",//CSRF attacksf
+        sameSite: process.env.NODE_ENV === 'production' ? "None" : "Lax",//CSRF attacksf
         secure:process.env.NODE_ENV==='production',
     })
 }
