@@ -29,6 +29,7 @@ const Profile = () => {
     try {
       const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/followuser/${profileUser.username}`, {
         method: "POST",
+        credentials: "include",
       });
       
       const data = await res.json();

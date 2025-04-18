@@ -13,6 +13,7 @@ const useAddPost = () => {
             const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/addpost`,{
                 method:"POST",
                 body:formData,
+                credentials: "include",
             })
 
             const data=await res.json();

@@ -44,6 +44,7 @@ const Comment = (props) => {
     // Refresh comments
     const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/getpostcomments/${props.forPost}`, {
       method: "GET",
+      credentials: "include",
     });
     const data = await res.json();
     setAllComments(data.comments);

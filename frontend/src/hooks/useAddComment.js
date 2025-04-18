@@ -9,6 +9,7 @@ const useAddComment = () => {
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({commentBody}),
+        credentials: "include",
     })
     console.log(res)
     const data=await res.json();

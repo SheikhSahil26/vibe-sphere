@@ -16,6 +16,7 @@ const useGetProfile = (username) => {
                 setLoading(true)
                 const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/profile/${username}`,{
                     method:"GET",
+                    credentials: "include",
                 })
 
                 if(!res.ok) throw new Error('failed to fetch data')

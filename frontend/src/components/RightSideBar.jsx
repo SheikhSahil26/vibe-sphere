@@ -17,6 +17,7 @@ const RightSideBar = () => {
           try {
             const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/getusers`, {
               method: "GET",
+              credentials: "include",
             })
             const data = await res.json();
     

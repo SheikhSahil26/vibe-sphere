@@ -20,6 +20,7 @@ const useAddStory = () => {
             const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/story/add`,{
                 method:"POST",
                 body:formData,
+                credentials: "include",
             })
 
             const data=await res.json();

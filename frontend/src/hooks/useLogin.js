@@ -19,6 +19,7 @@ const useLogin = () => {
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username,password}),
+            credentials: "include",
         })
         console.log(res);
         const data=await res.json()

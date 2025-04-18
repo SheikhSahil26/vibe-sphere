@@ -21,6 +21,7 @@ const LikeDislike = (props) => {
       try{
         const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/like/${props.postId}`,{
           method:"POST",
+          credentials: "include",
         })
   
         const data=await res.json();
