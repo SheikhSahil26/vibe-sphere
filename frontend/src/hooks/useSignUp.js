@@ -6,10 +6,12 @@ const useSignUp=()=>{
 
     const {setAuthUser}=useAuthContext();
 
+    const backendUrl=import.meta.env.VITE_BACKEND_URL
+
     const signup=async({username,password})=>{
         
         try{
-            const res=await fetch("/api/auth/signup",{
+            const res=await fetch(`${backendUrl}/api/auth/signup`,{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password}),
