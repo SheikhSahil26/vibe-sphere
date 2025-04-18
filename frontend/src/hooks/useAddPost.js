@@ -10,7 +10,7 @@ const useAddPost = () => {
             formData.append('postImageUrl', postImageUrl); // Add postPic
             formData.append('postCaption', postCaption);           // Add caption
             
-            const res=await fetch("/api/post/addpost",{
+            const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/addpost`,{
                 method:"POST",
                 body:formData,
             })

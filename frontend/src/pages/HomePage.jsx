@@ -20,7 +20,7 @@ const HomePage = () => {
   useEffect(() => {
     const getAllPosts = async () => {
       try {
-        const res = await fetch("/api/post/getallposts", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/getallposts`, {
           method: "GET",
         })
 

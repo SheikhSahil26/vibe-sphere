@@ -145,7 +145,7 @@ const FriendsPage = () => {
     useEffect(() => {
         const getFriends = async () => {
             try {
-                const res = await fetch('/api/user/getfriends', {
+                const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/getfriends`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

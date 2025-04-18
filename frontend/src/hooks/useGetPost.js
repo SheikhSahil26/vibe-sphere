@@ -14,7 +14,7 @@ const useGetPost = (username) => {
 
     const getPosts=async ()=>{
         try{
-        const res=await fetch(`/api/post/getposts/${username}`,{
+        const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/getposts/${username}`,{
             method:"GET",
         })
         const data=await res.json();

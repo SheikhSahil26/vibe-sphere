@@ -9,7 +9,7 @@ const useGetStories = () => {
     const fetchUserStories=async (username)=>{
         try{
 
-            const res=await fetch(`/api/post/story/${username}`,{
+            const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/story/${username}`,{
 
                 method:"GET",
                 

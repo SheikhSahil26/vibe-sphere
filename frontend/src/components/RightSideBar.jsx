@@ -15,7 +15,7 @@ const RightSideBar = () => {
     useEffect(() => {
         const getAllUsers = async () => {
           try {
-            const res = await fetch("/api/user/getusers", {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/getusers`, {
               method: "GET",
             })
             const data = await res.json();

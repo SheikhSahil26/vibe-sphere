@@ -27,7 +27,7 @@ const Profile = () => {
     e.preventDefault();
     
     try {
-      const res = await fetch(`/api/user/followuser/${profileUser.username}`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/followuser/${profileUser.username}`, {
         method: "POST",
       });
       

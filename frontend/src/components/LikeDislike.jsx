@@ -19,7 +19,7 @@ const LikeDislike = (props) => {
   const handleLikeClick=async(e)=>{
       e.preventDefault();
       try{
-        const res=await fetch(`/api/post/like/${props.postId}`,{
+        const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/like/${props.postId}`,{
           method:"POST",
         })
   

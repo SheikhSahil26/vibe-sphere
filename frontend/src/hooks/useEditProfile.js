@@ -18,7 +18,7 @@ const useEditProfile = () => {
 
             
 
-            const res=await fetch("/api/user/editprofile",{
+            const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/editprofile`,{
                 method:"POST",
                 
                 body:formData

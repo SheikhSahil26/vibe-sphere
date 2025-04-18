@@ -42,7 +42,7 @@ const Comment = (props) => {
     setInputs({ ...inputs, commentBody: "" });
     
     // Refresh comments
-    const res = await fetch(`/api/post/getpostcomments/${props.forPost}`, {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/post/getpostcomments/${props.forPost}`, {
       method: "GET",
     });
     const data = await res.json();

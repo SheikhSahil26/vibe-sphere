@@ -14,7 +14,7 @@ const useGetProfile = (username) => {
                 console.log(username)
 
                 setLoading(true)
-                const res=await fetch(`/api/user/profile/${username}`,{
+                const res=await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/profile/${username}`,{
                     method:"GET",
                 })
 
