@@ -82,7 +82,12 @@ async function userLogin(req,res){
 
         if(!findUser){
             return res.status(400).json({
-                error:"no user found or invalid credentials"
+                error:"incorrect username or password"
+            })
+        }
+        else if(findUser.password!==password){
+            return res.status(400).json({
+                error:"incorrect username or password"
             })
         }
 
