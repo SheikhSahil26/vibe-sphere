@@ -7,13 +7,15 @@ const useLogin = () => {
   const {setAuthUser}=useAuthContext();
   const {setProfileUser}=useProfileContext()
 
+  const backendUrl=import.meta.env.VITE_BACKEND_URL
+
   const login=async({username,password})=>{
 
     
 
     try{
-      console.log(import.meta.env.VITE_API_BASE);
-        const res=await fetch(`https://vibe-sphere.onrender.com/api/auth/login`,{
+      
+        const res=await fetch(`${backendUrl}/api/auth/login`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username,password}),
