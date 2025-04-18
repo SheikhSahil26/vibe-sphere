@@ -9,8 +9,11 @@ const useLogin = () => {
 
   const login=async({username,password})=>{
 
+    
+
     try{
-        const res=await fetch(`${import.meta.env.VITE_API_BASE}/api/auth/login`,{
+      console.log(import.meta.env.VITE_API_BASE);
+        const res=await fetch(`https://vibe-sphere.onrender.com/api/auth/login`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username,password}),
